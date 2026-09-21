@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="神舞幻想攻略网提供《神舞幻想》全方位游戏指南，包含角色培养、BOSS打法、剧情解析及装备搭配技巧，助你轻松通关。">
+    <meta name="keywords" content="神舞幻想攻略, 神舞幻想, 游戏攻略, 国产单机, 古风RPG">
+    <title>神舞幻想攻略-全流程通关指南与角色培养技巧</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --primary-dark: #6c3483;
+            --secondary-color: #d35400;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-light: #7f8c8d;
+            --border-radius: 8px;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            opacity: 0.8;
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://picsum.photos/seed/shenwu_hero/1600/600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(44, 62, 80, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Character Cards */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .char-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .char-info {
+            padding: 15px;
+        }
+
+        .char-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .char-info p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Guide List */
+        .guide-list {
+            list-style: none;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid transparent;
+            transition: border-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .guide-item:hover {
+            border-left-color: var(--primary-color);
+        }
+
+        .guide-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .guide-tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .boss-list li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .boss-list li:last-child {
+            border-bottom: none;
+        }
+
+        .difficulty {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .diff-hard { color: #c0392b; background: #fadbd8; }
+        .diff-med { color: #d35400; background: #fdebd0; }
+        .diff-easy { color: #27ae60; background: #d5f5e3; }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 15px;
+        }
+
+        .faq-answer p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <span>神舞幻想攻略网</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">角色图鉴</a></li>
+                <li><a href="#">BOSS攻略</a></li>
+                <li><a href="#">装备大全</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>神舞幻想攻略</h1>
+        <p>探索上古神域，破解命运封印。为您提供最详尽的角色培养、BOSS打法及剧情解析指南。</p>
+        <a href="#guide" class="btn">开始阅读攻略</a>
+    </div>
+</div>
+
+<main class="container">
+    <div class="main-grid">
+        <!-- Main Content Column -->
+        <div class="content-col">
+            
+            <!-- Featured Guide -->
+            <section id="guide">
+                <div class="section-title">
+                    <h2>核心攻略指南</h2>
+                    <a href="#">查看更多 &raquo;</a>
+                </div>
+                <ul class="guide-list">
+                    <li class="guide-item">
+                        <div class="guide-title">新手入门：快速提升等级与战力技巧</div>
+                        <span class="guide-tag">入门必看</span>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-title">全角色养成路线推荐：主C与辅助搭配</div>
+                        <span class="guide-tag">角色培养</span>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-title">第四章剧情解析：理解“神”与“人”的羁绊</div>
+                        <span class="guide-tag">剧情解析</span>
+                    </li>
+                    <li class="guide-item">
+                        <div class="guide-title">BOSS战实战：击败“刑天”的技巧与站位</div>
+                        <span class="guide-tag">BOSS攻略</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Character Showcase -->
+            <section>
+                <div class="section-title">
+                    <h2>主要角色一览</h2>
+                    <a href="#">角色图鉴 &raquo;</a>
+                </div>
+                <div class="char-grid">
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/shenwu_liu/300/300" alt="刘舞阳" class="char-img">
+                        <div class="char-info">
+                            <h3>刘舞阳</h3>
+                            <p>本作主角，拥有操控神舞的能力。</p>
+                        </div>
+                    </article>
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/shenwu_yun/300/300" alt="云铮" class="char-img">
+                        <div class="char-info">
+                            <h3>云铮</h3>
+                            <p>忠诚的护卫，剑术高超。</p>
+                        </div>
+                    </article>
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/shenwu_yao/300/300" alt="尧天" class="char-img">
+                        <div class="char-info">
+                            <h3>尧天</h3>
+                            <p>神秘的天界使者，身世成谜。</p>
+                        </div>
+                    </article>
+                    <article class="char-card">
+                        <img src="https://picsum.photos/seed/shenwu_li/300/300" alt="李师师" class="char-img">
+                        <div class="char-info">
+                            <h3>李师师</h3>
+                            <p>乱世中的红颜，医术精湛。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Detailed Text Content -->
+            <section>
+                <div class="section-title">
+                    <h2>游戏机制深度解析</h2>
+                </div>
+                <article>
+                    <h3>战斗系统：神舞的运用</h3>
+                    <p>《神舞幻想》的核心战斗机制在于“神舞”系统的运用。玩家在战斗中可以通过积累能量释放神舞技能。神舞技能不仅伤害高，还往往带有控制效果或防御增益。对于新手玩家，建议优先升级主角刘舞阳的远程神舞技能，以便在战斗初期拉开距离，避免被近身。</p>
+                    <br>
+                    <h3>装备搭配与属性选择</h3>
+                    <p>游戏中的装备主要分为武器、防具和饰品。在装备选择上，应注重角色的职业定位。例如，坦克型角色（如云铮）应优先选择增加生命值和防御力的装备；输出型角色则应侧重攻击力和暴击率。饰品方面，注意装备词条的属性是否符合当前阶段的战斗需求。</p>
+                </article>
+            </section>
+
+        </div>
+
+        <!-- Sidebar Column -->
+        <aside class="sidebar">
+            <!-- BOSS List -->
+            <div class="sidebar-widget">
+                <h3>BOSS 挑战指南</h3>
+                <ul class="boss-list">
+                    <li>
+                        <span>刑天</span>
+                        <span class="difficulty diff-hard">困难</span>
+                    </li>
+                    <li>
+                        <span>蚩尤</span>
+                        <span class="difficulty diff-hard">极难</span>
+                    </li>
+                    <li>
+                        <span>女娲</span>
+                        <span class="difficulty diff-med">中等</span>
+                    </li>
+                    <li>
+                        <span>共工</span>
+                        <span class="difficulty diff-med">中等</span>
+                    </li>
+                    <li>
+                        <span>祝融</span>
+                        <span class="difficulty diff-easy">简单</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- FAQ -->
+            <div class="sidebar-widget">
+                <h3>常见问题解答 (FAQ)</h3>
+                <div class="faq-item active">
+                    <div class="faq-question">游戏支持哪些平台？</div>
+                    <div class="faq-answer">
+                        <p>《神舞幻想》主要在PC平台发售，同时也登陆了PlayStation 4主机。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何获得稀有装备？</div>
+                    <div class="faq-answer">
+                        <p>稀有装备通常通过挑战高难度副本、完成特定成就或参与限时活动获取。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">战斗中如何回血？</div>
+                    <div class="faq-answer">
+                        <p>玩家可以使用“回春术”技能，或者通过装备带有回复属性的饰品来持续恢复生命值。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="sidebar-widget" style="text-align: center; background: #eee;">
+                <p style="color: #999; padding: 20px;">广告位：游戏周边商城</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p style="font-size: 14px; color: #bdc3c7;">
+                    本站为《神舞幻想》玩家提供非官方的攻略、图鉴及资讯分享，致力于帮助玩家更好地体验游戏。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">全BOSS打法</a></li>
+                    <li><a href="#">全收集攻略</a></li>
+                    <li><a href="#">版本更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">游民星空</a></li>
+                    <li><a href="#">3DM游戏网</a></li>
+                    <li><a href="#">Steam社区</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 神舞幻想攻略网 版权所有 | 仅供学习交流使用
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ Accordion Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
