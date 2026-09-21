@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="好看的网名符号大全 - 提供最新、最全的网名符号素材、特殊字符组合及网名生成工具。包含个性符号、可爱符号、酷炫符号及最新热门网名推荐，助你打造独一无二的社交账号标识。">
+    <meta name="keywords" content="好看的网名符号,网名符号大全,个性网名,特殊符号,QQ网名,微信网名">
+    <title>好看的网名符号-个性符号素材与网名生成指南</title>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-box input {
+            padding: 0.5rem 1rem;
+            border: 1px solid #dfe6e9;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            width: 240px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+
+        .tag:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 5px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .refresh-btn {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            border: 1px solid var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .refresh-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Symbol Grid */
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .symbol-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .symbol-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .symbol-char {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .symbol-name {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Usage Guide */
+        .guide-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guide-card ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .guide-card li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Category Filter */
+        .category-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .cat-btn {
+            padding: 0.5rem 1.2rem;
+            background: white;
+            border: 1px solid #dfe6e9;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .cat-btn.active, .cat-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 2000;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-section {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none; /* Simplify for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <span>✦</span> 符号网名库
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#category">分类</a></li>
+                <li><a href="#generator">生成器</a></li>
+                <li><a href="#guide">使用指南</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索符号..." id="searchInput">
+            <button onclick="searchSymbols()">搜索</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>打造独一无二的个性网名</h1>
+    <p>精选全网最热门、最好看的网名符号，包括特殊字符、可爱表情及创意组合，一键复制，即刻使用。</p>
+    <div class="hero-tags">
+        <div class="tag" onclick="filterCategory('all')">全部</div>
+        <div class="tag" onclick="filterCategory('cool')">酷炫</div>
+        <div class="tag" onclick="filterCategory('cute')">可爱</div>
+        <div class="tag" onclick="filterCategory('art')">艺术</div>
+        <div class="tag" onclick="filterCategory('star')">星空</div>
+        <div class="tag" onclick="filterCategory('emoji')">Emoji</div>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- 分类导航 -->
+    <section id="category">
+        <div class="category-bar">
+            <button class="cat-btn active" onclick="filterCategory('all', this)">全部符号</button>
+            <button class="cat-btn" onclick="filterCategory('cool', this)">酷炫符号</button>
+            <button class="cat-btn" onclick="filterCategory('cute', this)">可爱符号</button>
+            <button class="cat-btn" onclick="filterCategory('star', this)">星空银河</button>
+            <button class="cat-btn" onclick="filterCategory('art', this)">艺术线条</button>
+            <button class="cat-btn" onclick="filterCategory('emoji', this)">Emoji表情</button>
+        </div>
+    </section>
+
+    <!-- 热门符号展示区 -->
+    <section>
+        <div class="section-title">
+            <span>热门符号推荐</span>
+            <span class="refresh-btn" onclick="refreshSymbols()">🔄 换一批</span>
+        </div>
+        <div class="symbol-grid" id="symbolGrid">
+            <!-- 符号将通过 JS 动态生成 -->
+        </div>
+    </section>
+
+    <!-- 生成器工具区 -->
+    <section id="generator" style="margin-top: 4rem;">
+        <div class="section-title">
+            <span>网名符号生成器</span>
+        </div>
+        <div class="guide-card" style="text-align: center;">
+            <p style="margin-bottom: 1rem; color: var(--text-light);">选择风格，点击生成，自动组合成网名</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <button class="cat-btn active" onclick="setGeneratorStyle('cool')">✦ 酷炫风</button>
+                <button class="cat-btn" onclick="setGeneratorStyle('cute')">✿ 可爱风</button>
+                <button class="cat-btn" onclick="setGeneratorStyle('star')">⭐ 星空风</button>
+            </div>
+            <div style="font-size: 1.5rem; padding: 1rem; background: #f1f2f6; border-radius: 8px; min-height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;" id="generatedName">
+                点击生成网名
+            </div>
+            <button class="cat-btn" onclick="generateName()" style="font-size: 1rem; padding: 0.6rem 2rem;">生成网名</button>
+        </div>
+    </section>
+
+    <!-- 使用指南与注意事项 -->
+    <section id="guide" style="margin-top: 4rem;">
+        <div class="section-title">使用指南与注意事项</div>
+        <div class="guide-section">
+            <article class="guide-card">
+                <h3>📝 如何使用符号</h3>
+                <ul>
+                    <li><strong>复制粘贴：</strong> 点击任意符号卡片即可复制，然后直接粘贴到QQ、微信或游戏昵称中。</li>
+                    <li><strong>组合技巧：</strong> 将符号与汉字或英文单词混合使用，可以增强视觉层次感。</li>
+                    <li><strong>避免冲突：</strong> 部分特殊符号在旧版本客户端可能显示为乱码，建议优先使用Unicode标准字符。</li>
+                </ul>
+            </article>
+            <article class="guide-card">
+                <h3>⚠️ 常见问题</h3>
+                <ul>
+                    <li><strong>显示不全：</strong> 如果网名显示不全，请检查是否包含过多特殊字符或长度超限。</li>
+                    <li><strong>无法复制：</strong> 请确保您的设备已开启剪贴板权限，或尝试长按符号进行复制。</li>
+                    <li><strong>兼容性：</strong> 大部分现代社交平台（微信、微博、抖音）均支持Unicode 10.0及以上版本的符号。</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">版权声明</a>
+            <a href="#">联系合作</a>
+            <a href="#">帮助中心</a>
+        </div>
+        <p class="copyright">© 2023 好看的网名符号库. All Rights Reserved. 本站提供符号素材仅供个人娱乐使用。</p>
+    </div>
+</footer>
+
+<div class="toast" id="toast">已复制到剪贴板！</div>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+<script>
+    // 符号数据源
+    const symbolData = {
+        cool: [
+            { char: '⚡', name: '闪电' },
+            { char: '☄️', name: '彗星' },
+            { char: '☢️', name: '辐射' },
+            { char: '⚔️', name: '利剑' },
+            { char: '🛡️', name: '盾牌' },
+            { char: '🔥', name: '火焰' },
+            { char: '❄️', name: '冰霜' },
+            { char: '💀', name: '骷髅' },
+            { char: '🔮', name: '水晶球' },
+            { char: '🧿', name: '邪恶之眼' },
+            { char: '🩸', name: '血液' },
+            { char: '⚡', name: '电流' },
+            { char: '⚡', name: '雷电' },
+            { char: '⚡', name: '高压' },
+            { char: '⚡', name: '电击' }
+        ],
+        cute: [
+            { char: '✿', name: '花环' },
+            { char: '❀', name: '蔷薇' },
+            { char: '💕', name: '爱心' },
+            { char: '🌸', name: '樱花' },
+            { char: '🍬', name: '糖果' },
+            { char: '🦋', name: '蝴蝶' },
+            { char: '🎀', name: '蝴蝶结' },
+            { char: '☁️', name: '云朵' },
+            { char: '🍓', name: '草莓' },
+            { char: '🐱', name: '猫咪' },
+            { char: '🐰', name: '兔子' },
+            { char: '🍭', name: '棒棒糖' },
+            { char: '🦄', name: '独角兽' },
+            { char: '🐾', name: '爪印' },
+            { char: '🦊', name: '狐狸' }
+        ],
+        star: [
+            { char: '✨', name: '闪亮' },
+            { char: '🌟', name: '星星' },
+            { char: '✦', name: '星号' },
+            { char: '⭐', name: '星标' },
+            { char: '✧', name: '星花' },
+            { char: '⭕', name: '圆圈' },
+            { char: '✴️', name: '四角星' },
+            { char: '❇️', name: '闪光' },
+            { char: '💫', name: '流星' },
+            { char: '🌌', name: '银河' },
+            { char: '🌠', name: '流星雨' },
+            { char: '🪐', name: '土星' },
+            { char: '🌙', name: '月亮' },
+            { char: '☀️', name: '太阳' },
+            { char: '🌕', name: '满月' }
+        ],
+        art: [
+            { char: '➳', name: '箭头' },
+            { char: '➵', name: '箭头' },
+            { char: '❧', name: '花饰' },
+            { char: '☙', name: '花饰' },
+            { char: '❘', name: '竖线' },
+            { char: '❙', name: '竖线' },
+            { char: '❚', name: '竖线' },
+            { char: '❛', name: '引号' },
+            { char: '❜', name: '引号' },
+            { char: '❝', name: '引号' },
+            { char: '❞', name: '引号' },
+            { char: '⁂', name: '花界' },
+            { char: '⁕', name: '星号' },
+            { char: '⁎', name: '星号' },
+            { char: '⁏', name: '星号' }
+        ],
+        emoji: [
+            { char: '😂', name: '大笑' },
+            { char: '😎', name: '墨镜' },
+            { char: '🤔', name: '思考' },
+            { char: '🥰', name: '喜爱' },
+            { char: '🤯', name: '爆炸' },
+            { char: '🥳', name: '庆祝' },
+            { char: '😴', name: '睡觉' },
+            { char: '🤪', name: '变脸' },
+            { char: '🥺', name: '可怜' },
+            { char: '🤩', name: '崇拜' },
+            { char: '🤫', name: '嘘' },
+            { char: '🤭', name: '捂嘴' },
+            { char: '🫠', name: '融化' },
+            { char: '🫡', name: '敬礼' },
+            { char: '🫢', name: '捂眼' }
+        ]
+    };
+
+    const generatorData = {
+        cool: ['暗夜', '雷神', '狂暴', '风暴', '刺客', '幽灵', '黑曜石', '极光', '深渊', '泰坦', '龙魂', '战神', '幻影', '虚空', '涅槃'],
+        cute: ['草莓', '奶茶', '泡泡', '糖果', '云朵', '微风', '月亮', '星星', '小熊', '兔子', '猫咪', '软糖', '棉花糖', '樱花', '童话'],
+        star: ['星河', '银河', '宇宙', '引力', '光年', '璀璨', '梦境', '苍穹', '极夜', '辉光', '轨迹', '星尘', '深空', '永恒', '黎明']
+    };
+
+    let currentCategory = 'all';
+
+    // 初始化页面
+    document.addEventListener('DOMContentLoaded', () => {
+        renderSymbols(symbolData.all || [...symbolData.cool, ...symbolData.cute, ...symbolData.star, ...symbolData.art, ...symbolData.emoji]);
+    });
+
+    // 渲染符号卡片
+    function renderSymbols(items) {
+        const grid = document.getElementById('symbolGrid');
+        grid.innerHTML = '';
+        
+        items.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.className = 'symbol-card';
+            card.style.animationDelay = `${index * 0.05}s`;
+            card.innerHTML = `
+                <span class="symbol-char">${item.char}</span>
+                <span class="symbol-name">${item.name}</span>
+            `;
+            card.onclick = () => copySymbol(item.char);
+            grid.appendChild(card);
+        });
+    }
+
+    // 复制符号功能
+    function copySymbol(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast(`已复制: ${text}`);
+        }).catch(err => {
+            // 降级处理
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast(`已复制: ${text}`);
+        });
+    }
+
+    // Toast 提示
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2000);
+    }
+
+    // 分类筛选
+    function filterCategory(category, btnElement) {
+        currentCategory = category;
+        
+        // 更新按钮状态
+        if (btnElement) {
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+        } else {
+            // 如果是从Tag点击（没有传入btnElement）
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+        }
+
+        let items = [];
+        if (category === 'all') {
+            items = [...symbolData.cool, ...symbolData.cute, ...symbolData.star, ...symbolData.art, ...symbolData.emoji];
+        } else {
+            items = symbolData[category] || [];
+        }
+        renderSymbols(items);
+    }
+
+    // 刷新符号
+    function refreshSymbols() {
+        const allItems = [...symbolData.cool, ...symbolData.cute, ...symbolData.star, ...symbolData.art, ...symbolData.emoji];
+        // 随机打乱并取前15个
+        const shuffled = allItems.sort(() => 0.5 - Math.random()).slice(0, 15);
+        renderSymbols(shuffled);
+    }
+
+    // 搜索功能
+    function searchSymbols() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (!query) return;
+
+        const allItems = [...symbolData.cool, ...symbolData.cute, ...symbolData.star, ...symbolData.art, ...symbolData.emoji];
+        const filtered = allItems.filter(item => 
+            item.name.includes(query) || item.char.includes(query)
+        );
+        
+        // 更新UI
+        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+        renderSymbols(filtered);
+        showToast(`找到 ${filtered.length} 个相关符号`);
+    }
+
+    // 生成器功能
+    function setGeneratorStyle(style) {
+        document.querySelectorAll('#generator .cat-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+
+    function generateName() {
+        const styles = ['cool', 'cute', 'star'];
+        const randomStyle = styles[Math.floor(Math.random() * styles.length)];
+        const words = generatorData[randomStyle];
+        const randomWord = words[Math.floor(Math.random() * words.length)];
+        
+        // 随机插入1-2个符号
+        const symbols = ['✦', '✨', '★', '❀', '✿', '☆'];
+        const sym1 = symbols[Math.floor(Math.random() * symbols.length)];
+        const sym2 = Math.random() > 0.5 ? symbols[Math.floor(Math.random() * symbols.length)] : '';
+        
+        const result = `${sym1}${randomWord}${sym2}`.trim();
+        document.getElementById('generatedName').textContent = result;
+        document.getElementById('generatedName').style.color = 'var(--primary-color)';
+    }
+</script>
+
+</body>
+</html>
