@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云狐 - 企业级云计算与数字化解决方案提供商</title>
+    <meta name="description" content="云狐官网提供企业级云计算、SaaS应用、数据安全及数字化转型咨询服务。致力于为中小企业提供稳定、安全、高效的云端基础设施与业务协同平台。">
+    <meta name="keywords" content="云狐,云计算,云服务,SaaS,企业数字化转型,云存储,云安全">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #0f172a;
+            --accent-color: #f59e0b;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 100px 0 80px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 540px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .stat-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stat-badge .icon {
+            width: 40px;
+            height: 40px;
+            background: #dbeafe;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-badge .text strong {
+            display: block;
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+        }
+
+        .stat-badge .text span {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--bg-card);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: var(--bg-body);
+            padding: 40px 32px;
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-color: var(--border-color);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--secondary-color);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Features/Advantage Section */
+        .features {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .features .section-header h2 {
+            color: white;
+        }
+
+        .features .section-header p {
+            color: #94a3b8;
+        }
+
+        .feature-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-item .check-icon {
+            min-width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .feature-img img {
+            border-radius: 8px;
+            opacity: 0.9;
+        }
+
+        /* Products/Showcase */
+        .products {
+            background-color: var(--bg-body);
+        }
+
+        .product-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            padding: 8px 24px;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 200px;
+            background-color: #e2e8f0;
+            position: relative;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .cta .btn:hover {
+            background: #f1f5f9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                margin: 0 auto 32px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                margin-top: 40px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .stat-badge {
+                left: 0;
+                bottom: -20px;
+            }
+
+            .feature-split {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .nav-actions .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>☁</span> 云狐 CloudFox
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#services">云服务</a></li>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#products">产品矩阵</a></li>
+                    <li><a href="#resources">技术资源</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline" style="padding: 8px 20px;">登录</a>
+                <a href="#" class="btn btn-primary" style="padding: 8px 20px;">免费试用</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>构建企业数字化未来<br>从<strong>云狐</strong>开始</h1>
+                <p>云狐提供一站式云计算基础设施、SaaS应用及数据安全服务。助您降低IT成本，提升业务敏捷性，实现数据驱动的智能决策。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">立即咨询</a>
+                    <a href="#" class="btn btn-outline">查看案例</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/cloudfox_hero/600/400" alt="云狐云平台架构示意图">
+                <div class="stat-badge">
+                    <div class="icon">✓</div>
+                    <div class="text">
+                        <strong>99.99%</strong>
+                        <span>服务可用性保障</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心云服务</h2>
+                <p>基于企业级标准构建，提供稳定、安全、可扩展的云基础设施支持。</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">☁</div>
+                    <h3>弹性计算 ECS</h3>
+                    <p>提供高性能、高可靠的云服务器，支持按需扩展，满足不同业务场景的计算需求。</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">💾</div>
+                    <h3>云存储 OSS</h3>
+                    <p>海量、安全、低成本、高可靠的云对象存储服务，适用于图片、音视频及各类数据文件。</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>云盾安全</h3>
+                    <p>全方位的云安全防护体系，包括DDoS防护、Web应用防火墙及数据加密服务。</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>云数据库 RDS</h3>
+                    <p>稳定可靠、可弹性伸缩的在线数据库服务，支持MySQL、PostgreSQL等多种引擎。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="solutions" class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择云狐</h2>
+                <p>我们致力于通过技术创新，为企业提供超越预期的云服务体验。</p>
+            </div>
+            <div class="feature-split">
+                <div class="feature-img">
+                    <img src="https://picsum.photos/seed/tech_features/600/450" alt="云狐技术架构">
+                </div>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>全球节点覆盖</h4>
+                            <p>我们在全球多个区域部署数据中心，确保您的业务能够低延迟地触达全球用户。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>混合云架构支持</h4>
+                            <p>无缝连接公有云与私有云资源，满足企业对数据主权和合规性的严格要求。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>智能运维助手</h4>
+                            <p>内置AI运维分析系统，自动识别潜在风险，提供优化建议，降低运维复杂度。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>灵活计费模式</h4>
+                            <p>提供按量付费、包年包月等多种计费方式，帮助企业精细化控制云成本。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <div class="section-header">
+                <h2>精选解决方案</h2>
+                <p>针对不同行业痛点的深度定制服务，助力业务快速落地。</p>
+            </div>
+            <div class="product-tabs">
+                <button class="tab-btn active">通用型</button>
+                <button class="tab-btn">电商型</button>
+                <button class="tab-btn">金融型</button>
+                <button class="tab-btn">游戏型</button>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-tag">推荐</span>
+                        <img src="https://picsum.photos/seed/office/400/300" alt="企业办公云">
+                    </div>
+                    <div class="product-info">
+                        <h3>企业协同办公套件</h3>
+                        <p>集成文档协作、即时通讯、项目管理的SaaS平台，提升团队协作效率。</p>
+                        <a href="#" class="product-link">了解更多 &rarr;</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-tag">热销</span>
+                        <img src="https://picsum.photos/seed/ecommerce/400/300" alt="电商云">
+                    </div>
+                    <div class="product-info">
+                        <h3>高并发电商解决方案</h3>
+                        <p>专为双11等大促场景设计，具备弹性扩容和秒级响应能力的云架构。</p>
+                        <a href="#" class="product-link">了解更多 &rarr;</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/gaming/400/300" alt="游戏云">
+                    </div>
+                    <div class="product-info">
+                        <h3>游戏云端引擎</h3>
+                        <p>提供低延迟、高并发的游戏服务器托管服务，保障玩家极致体验。</p>
+                        <a href="#" class="product-link">了解更多 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>准备好上云了吗？</h2>
+            <p>立即注册云狐账号，获取新用户专属 30 天免费试用额度。</p>
+            <a href="#" class="btn">免费开始使用</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><span>☁</span> 云狐 CloudFox</h3>
+                    <p style="opacity: 0.7; line-height: 1.8;">
+                        云狐科技致力于成为全球领先的企业级云计算服务商。我们通过技术创新，帮助企业在数字化浪潮中保持领先，构建更加智能、高效的数字未来。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#">云服务器 ECS</a></li>
+                        <li><a href="#">云数据库 RDS</a></li>
+                        <li><a href="#">对象存储 OSS</a></li>
+                        <li><a href="#">CDN 加速</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>解决方案</h4>
+                    <ul>
+                        <li><a href="#">企业上云指南</a></li>
+                        <li><a href="#">大数据分析</a></li>
+                        <li><a href="#">物联网 IoT</a></li>
+                        <li><a href="#">人工智能 AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持与联系</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">API 文档</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 云狐 CloudFox. All Rights Reserved. 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
