@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="滑模公司专业提供高精度滑模施工、液压滑模工程、烟囱滑模及大型筒仓滑升服务。拥有丰富的大型滑模施工经验，提供滑模技术方案、施工方案及安全质量控制指导。">
+    <meta name="keywords" content="滑模公司,滑模施工,滑模工程,液压滑模,烟囱滑模,筒仓滑模,滑模施工方案">
+    <title>滑模公司-大型滑模施工技术与工程解决方案服务商</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f0f4f8;
+            --text-dark: #1a1a1a;
+            --text-gray: #555555;
+            --text-light: #888888;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            height: var(--header-height);
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #004494;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: var(--header-height);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-title strong {
+            color: var(--primary-color);
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(255,255,255,0.8);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            border: 1px solid rgba(0,86,179,0.2);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+        }
+
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Projects Showcase */
+        .projects-section {
+            background-color: var(--secondary-color);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .project-img {
+            height: 220px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-category {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Features / Process */
+        .features-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(0,86,179,0.15);
+            line-height: 1;
+        }
+
+        .feature-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .feature-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--secondary-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container nav {
+                display: none; /* Simplify for this static demo */
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .features-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21h18"/>
+                    <path d="M5 21V7l8-4 8 4v14"/>
+                    <path d="M8 21v-8h8v8"/>
+                </svg>
+                <span>智建滑模</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#services">工程服务</a></li>
+                    <li><a href="#projects">经典案例</a></li>
+                    <li><a href="#process">施工工艺</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">获取方案</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="hero-tags">
+                        <span class="tag">专业承包</span>
+                        <span class="tag">技术领先</span>
+                        <span class="tag">安全可靠</span>
+                    </div>
+                    <h1 class="hero-title">打造高精度 <strong>滑模工程</strong> 的首选合作伙伴</h1>
+                    <p class="hero-desc">作为专业的滑模公司，我们专注于各类高耸构筑物的液压滑模施工，拥有先进的液压提升系统和丰富的施工经验，确保工程进度与质量。</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start;">
+                        <a href="#contact" class="cta-button">咨询施工方案</a>
+                        <a href="#projects" style="padding: 10px 24px; border: 1px solid var(--text-dark); border-radius: 4px; font-weight: 600;">查看工程案例</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/slide1/600/400" alt="烟囱滑模施工现场" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">核心工程服务</h2>
+                    <p class="section-desc">提供全方位的滑模技术支持，涵盖从方案设计到现场施工的全过程服务。</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>烟囱滑模工程</h3>
+                        <p>针对火力发电厂、化工厂等各类烟囱的滑模施工，严格控制垂直度与壁厚，确保烟囱结构安全稳定。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+                        </div>
+                        <h3>筒仓滑模施工</h3>
+                        <p>粮食筒仓、水泥库等大型圆筒结构的高效滑升，优化模板体系，提升混凝土成型质量。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>水塔与储罐</h3>
+                        <p>各类水塔、储油罐、储气罐的滑模施工，适应复杂曲面结构，提供定制化施工解决方案。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </div>
+                        <h3>框架结构滑模</h3>
+                        <p>高层建筑、多层框架结构的滑模施工，结合爬升模板工艺，实现快速建造成型。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">经典工程案例</h2>
+                    <p class="section-desc">凭借精湛的施工技术，我们已成功完成多个大型滑模工程，赢得客户信赖。</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="https://picsum.photos/seed/chimney1/400/300" alt="250米高烟囱滑模工程">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">电力工程</span>
+                            <h3 class="project-title">250米烟囱滑模工程</h3>
+                            <div class="project-meta">
+                                <span>高度: 250m</span>
+                                <span>难度: ★★★★★</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="https://picsum.photos/seed/silo1/400/300" alt="5万吨级筒仓群">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">仓储物流</span>
+                            <h3 class="project-title">5万吨级筒仓群施工</h3>
+                            <div class="project-meta">
+                                <span>数量: 12座</span>
+                                <span>工期: 45天</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="https://picsum.photos/seed/tower1/400/300" alt="双曲线冷却塔滑模">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">水利电力</span>
+                            <h3 class="project-title">双曲线冷却塔滑模</h3>
+                            <div class="project-meta">
+                                <span>高度: 120m</span>
+                                <span>类型: 双曲线</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">标准化施工流程</h2>
+                    <p class="section-desc">严谨的施工流程管理，是保证滑模工程安全、高效、优质的关键。</p>
+                </div>
+                <div class="features-section">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-number">01</div>
+                            <div class="feature-content">
+                                <h4>方案设计与论证</h4>
+                                <p>深入现场勘察，结合工程特点，设计科学合理的滑模施工组织设计及专项方案，并进行专家论证。</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">02</div>
+                            <div class="feature-content">
+                                <h4>模板与设备组装</h4>
+                                <p>精心组装液压滑模平台、提升架及模板系统，调试液压千斤顶及控制系统，确保设备运行平稳。</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">03</div>
+                            <div class="feature-content">
+                                <h4>滑升与观测</h4>
+                                <p>按照“滑一浇一”原则进行混凝土浇筑，同步进行标高、垂直度及几何尺寸的观测与纠偏。</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-number">04</div>
+                            <div class="feature-content">
+                                <h4>验收与交付</h4>
+                                <p>工程完工后进行严格的各项检测，确保结构质量符合规范，提供完整的竣工资料并交付使用。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://picsum.photos/seed/slide2/600/500" alt="滑模施工工艺流程">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                    <p class="section-desc">关于滑模施工的常见疑问与专业解答。</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item active">
+                        <div class="faq-question">滑模施工对天气有什么要求？</div>
+                        <div class="faq-answer">
+                            <p>滑模施工对天气有一定要求。通常在风力超过4级、大雨、大雪或气温低于0℃时，应停止滑升作业。雨后及冰雪融化后，应检查模板及支撑系统是否牢固，方可继续施工。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">滑模工程的主要优点是什么？</div>
+                        <div class="faq-answer">
+                            <p>滑模施工具有施工速度快、机械化程度高、节约模板材料、降低劳动强度等优点。特别适用于垂直度要求高、高度大的筒仓、烟囱等构筑物施工。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何保证滑模的垂直度？</div>
+                        <div class="faq-answer">
+                            <p>通过在滑模平台上设置激光铅垂仪、经纬仪等观测仪器，对结构中心线进行实时监测。一旦发现偏差，立即通过调整千斤顶提升高度（“调平”）或支承杆纠偏等措施进行纠正。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">滑模施工的安全措施有哪些？</div>
+                        <div class="faq-answer">
+                            <p>包括设置可靠的防坠落设施、操作平台满铺脚手板、设置安全网、配备足够的安全消防器材、定期进行设备检查和人员安全培训等，确保施工全过程安全可控。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="section" style="background-color: var(--primary-color); color: var(--white);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">需要专业的滑模施工方案？</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px; opacity: 0.9;">我们拥有20年行业经验，随时准备为您提供技术支持和现场服务。</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="tel:400-123-4567" class="cta-button" style="background-color: var(--white); color: var(--primary-color);">拨打咨询热线</a>
+                    <a href="mailto:contact@slideform.com" class="cta-button" style="border: 2px solid var(--white);">发送邮件咨询</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>智建滑模工程公司</h4>
+                    <p>专注于高耸构筑物滑模施工20余年，致力于为客户提供安全、高效、高质量的滑模工程服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#services">工程服务</a></li>
+                        <li><a href="#projects">工程案例</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>工程类别</h4>
+                    <ul>
+                        <li><a href="#">烟囱滑模</a></li>
+                        <li><a href="#">筒仓滑模</a></li>
+                        <li><a href="#">水塔施工</a></li>
+                        <li><a href="#">框架滑模</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>中国·某市工业园区科技路88号</span>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>400-123-4567</span>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>contact@slideform.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 智建滑模工程公司 版权所有 | 仅供演示使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
