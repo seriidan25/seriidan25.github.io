@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="狂战士技能 - 深度解析地下城与勇士DNF中狂战士职业的技能机制、连招技巧、加点推荐及装备搭配指南。">
+    <meta name="keywords" content="狂战士技能, DNF, 地下城与勇士, 狂战士, 技能加点, DNF攻略">
+    <title>狂战士技能 - DNF职业深度攻略与实战指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b0000;
+            --secondary-color: #ff4500;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2a2a2a;
+            --text-main: #ffffff;
+            --text-sub: #b0b0b0;
+            --accent-green: #2ecc71;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Layout & Containers */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 69, 0, 0.1);
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.8), rgba(26, 26, 26, 0.9)), url('https://picsum.photos/seed/dnfwarrior/1600/600') center/cover;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: normal;
+            margin-left: 10px;
+        }
+
+        /* Skill Grid */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--secondary-color);
+        }
+
+        .skill-header {
+            background: linear-gradient(to right, #3d0000, #1a0000);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .skill-type {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .skill-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .skill-body {
+            padding: 20px;
+        }
+
+        .skill-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+        }
+
+        .skill-stat {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stat-tag {
+            font-size: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-tag.highlight {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Guide Layout */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .guide-content {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+        }
+
+        .guide-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-box {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+        }
+
+        .sidebar-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .guide-list {
+            list-style: none;
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .tag:hover {
+            color: var(--text-main);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>⚔️</span> 狂战士技能百科
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">技能详解</a></li>
+                <li><a href="#builds">加点指南</a></li>
+                <li><a href="#combo">连招技巧</a></li>
+                <li><a href="#gear">装备搭配</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>狂战士技能</h1>
+        <p>掌握鲜血的诅咒，释放毁灭性的力量。为您带来最全面、最实用的狂战士技能解析与实战攻略。</p>
+    </section>
+
+    <!-- Core Skills Section -->
+    <section id="skills">
+        <div class="section-title">
+            核心技能解析
+            <span>核心输出与生存手段</span>
+        </div>
+        <div class="skill-grid">
+            <!-- Skill Card 1 -->
+            <article class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">血之狂暴</span>
+                    <span class="skill-type">被动</span>
+                </div>
+                <img src="https://picsum.photos/seed/bloodrage/400/200" alt="血之狂暴技能图" class="skill-img">
+                <div class="skill-body">
+                    <p class="skill-desc">狂战士的核心被动技能。开启后增加攻击速度和移动速度，并使HP不断减少，但攻击力大幅提升。</p>
+                    <div class="skill-stat">
+                        <span class="stat-tag highlight">攻速+15%</span>
+                        <span class="stat-tag highlight">移速+5%</span>
+                        <span class="stat-tag">HP持续减少</span>
+                    </div>
+                    <a href="#" class="btn">查看详细说明</a>
+                </div>
+            </article>
+
+            <!-- Skill Card 2 -->
+            <article class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">崩山裂地斩</span>
+                    <span class="skill-type">主动</span>
+                </div>
+                <img src="https://picsum.photos/seed/cataclysm/400/200" alt="崩山裂地斩技能图" class="skill-img">
+                <div class="skill-body">
+                    <p class="skill-desc">将敌人击飞并造成大范围伤害的强力技能。是清怪和爆发的重要手段，拥有较长的僵直时间。</p>
+                    <div class="skill-stat">
+                        <span class="stat-tag highlight">范围伤害</span>
+                        <span class="stat-tag">击飞控制</span>
+                        <span class="stat-tag">高CD</span>
+                    </div>
+                    <a href="#" class="btn">查看详细说明</a>
+                </div>
+            </article>
+
+            <!-- Skill Card 3 -->
+            <article class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">嗜血</span>
+                    <span class="skill-type">主动</span>
+                </div>
+                <img src="https://picsum.photos/seed/bloodthirst/400/200" alt="嗜血技能图" class="skill-img">
+                <div class="skill-body">
+                    <p class="skill-desc">提升自身攻击力和命中率，并使敌人进入流血状态。是刷图时的核心Buff技能，极大提升输出效率。</p>
+                    <div class="skill-stat">
+                        <span class="stat-tag highlight">攻击力+20%</span>
+                        <span class="stat-tag">命中率UP</span>
+                        <span class="stat-tag">流血效果</span>
+                    </div>
+                    <a href="#" class="btn">查看详细说明</a>
+                </div>
+            </article>
+
+            <!-- Skill Card 4 -->
+            <article class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">怒气爆发</span>
+                    <span class="skill-type">主动</span>
+                </div>
+                <img src="https://picsum.photos/seed/angry/400/200" alt="怒气爆发技能图" class="skill-img">
+                <div class="skill-body">
+                    <p class="skill-desc">通过积蓄怒气释放的强力攻击，向前方敌人突进并造成范围伤害。是衔接技能的重要手段。</p>
+                    <div class="skill-stat">
+                        <span class="stat-tag highlight">突进攻击</span>
+                        <span class="stat-tag">多段伤害</span>
+                        <span class="stat-tag">短CD</span>
+                    </div>
+                    <a href="#" class="btn">查看详细说明</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="builds">
+        <div class="section-title">
+            加点与实战指南
+            <span>从入门到精通</span>
+        </div>
+        <div class="guide-layout">
+            <div class="guide-content">
+                <h3>技能加点推荐</h3>
+                <p style="margin-top: 15px; color: var(--text-sub);">狂战士的加点流派多样，但核心思路始终围绕“高伤害”与“高频输出”。以下为通用加点思路：</p>
+                <ul class="guide-list" style="margin-top: 20px;">
+                    <li><strong>核心爆发：</strong> 崩山裂地斩、血气爆发、嗜血 必满。</li>
+                    <li><strong>核心续航：</strong> 怒气爆发、鲜血追击 必满，用于衔接技能。</li>
+                    <li><strong>核心生存：</strong> 嗜血（增伤）、血之狂暴（被动）必须保持开启。</li>
+                    <li><strong>TP分配：</strong> 优先点满大范围伤害技能，如崩山裂地斩、血气爆发。</li>
+                </ul>
+                
+                <h3 style="margin-top: 40px;">连招技巧解析</h3>
+                <p style="margin-top: 15px; color: var(--text-sub);">连招的核心在于利用技能的僵直时间。推荐连招顺序：普通攻击起手 -> 怒气爆发（突进） -> 崩山裂地斩（起手） -> 鲜血追击（收尾）。</p>
+            </div>
+
+            <aside class="guide-sidebar">
+                <div class="sidebar-box">
+                    <h3>热门标签</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">DNF手游</span>
+                        <span class="tag">男红眼</span>
+                        <span class="tag">伤害计算</span>
+                        <span class="tag">冷却缩减</span>
+                        <span class="tag">出血流</span>
+                        <span class="tag">觉醒</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>快速导航</h3>
+                    <ul class="guide-list">
+                        <li><a href="#">一觉技能视频</a></li>
+                        <li><a href="#">二觉技能视频</a></li>
+                        <li><a href="#">装备搭配模拟器</a></li>
+                        <li><a href="#">副本通关攻略</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+</main>
+
+<footer style="background-color: #111; padding: 40px 0; margin-top: 60px; border-top: 1px solid #333; text-align: center; color: var(--text-sub);">
+    <div class="container">
+        <p>&copy; 2023 狂战士技能百科. All Rights Reserved.</p>
+        <p style="font-size: 0.85rem; margin-top: 10px;">本站内容仅供玩家参考，游戏版权归其开发商所有。</p>
+    </div>
+</footer>
+
+</body>
+  </html>
